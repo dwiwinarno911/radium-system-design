@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Shell(du:*)"
+    ],
+    "deny": [],
+    "defaultMode": "default"
+  }
+}

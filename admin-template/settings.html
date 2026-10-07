@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – Settings</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="settings">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Settings</h1>
+      <p class="page-sub">Manage your account and preferences.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Tabs -->
+      <div class="col-lg-3">
+        <div class="demo-card p-2">
+          <nav class="nav flex-column settings-nav" role="tablist">
+            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabProfile" type="button" role="tab"><i class="fa-regular fa-user"></i>Profile</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabAccount" type="button" role="tab"><i class="fa-solid fa-sliders"></i>Account</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabNotif" type="button" role="tab"><i class="fa-regular fa-bell"></i>Notifications</button>
+            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabSecurity" type="button" role="tab"><i class="fa-solid fa-lock"></i>Security</button>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Panes -->
+      <div class="col-lg-9">
+        <div class="tab-content">
+
+          <!-- Profile -->
+          <div class="tab-pane fade show active" id="tabProfile" role="tabpanel">
+            <div class="demo-card">
+              <div class="demo-title">Profile</div>
+              <p class="demo-note">This information appears on your public profile.</p>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="setting-avatar"><i class="fa-solid fa-user"></i></div>
+                <div>
+                  <button class="btn btn-navy btn-sm"><i class="fa-solid fa-upload me-2"></i>Change photo</button>
+                  <button class="btn btn-outline-secondary btn-sm">Remove</button>
+                </div>
+              </div>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="pfName">Full name</label>
+                  <input id="pfName" type="text" class="form-control" value="John Snow">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="pfEmail">Email</label>
+                  <input id="pfEmail" type="email" class="form-control" value="john.snow@example.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="pfBio">Bio</label>
+                  <textarea id="pfBio" class="form-control" rows="3">Editor and writer focused on design systems and the web platform.</textarea>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-navy"><i class="fa-solid fa-floppy-disk me-2"></i>Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account -->
+          <div class="tab-pane fade" id="tabAccount" role="tabpanel">
+            <div class="demo-card">
+              <div class="demo-title">Account</div>
+              <p class="demo-note">Login details and regional preferences.</p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label" for="acUser">Username</label>
+                  <div class="input-group">
+                    <span class="input-group-text">@</span>
+                    <input id="acUser" type="text" class="form-control" value="johnsnow">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="acEmail">Email</label>
+                  <input id="acEmail" type="email" class="form-control" value="john.snow@example.com">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="acLang">Language</label>
+                  <select id="acLang" class="form-select">
+                    <option selected>English</option>
+                    <option>Indonesian</option>
+                    <option>German</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="acTz">Time zone</label>
+                  <select id="acTz" class="form-select">
+                    <option>(GMT+00:00) London</option>
+                    <option selected>(GMT+07:00) Jakarta</option>
+                    <option>(GMT+09:00) Tokyo</option>
+                    <option>(GMT-05:00) New York</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-navy"><i class="fa-solid fa-floppy-disk me-2"></i>Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notifications -->
+          <div class="tab-pane fade" id="tabNotif" role="tabpanel">
+            <div class="demo-card">
+              <div class="demo-title">Notifications</div>
+              <p class="demo-note">Choose what you want to be notified about.</p>
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="n1" checked>
+                <label class="form-check-label" for="n1">Email notifications</label>
+              </div>
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="n2" checked>
+                <label class="form-check-label" for="n2">Push notifications</label>
+              </div>
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="n3">
+                <label class="form-check-label" for="n3">Weekly digest</label>
+              </div>
+              <div class="form-check form-switch mb-3">
+                <input class="form-check-input" type="checkbox" id="n4" checked>
+                <label class="form-check-label" for="n4">Product updates</label>
+              </div>
+              <div class="form-check form-switch mb-4">
+                <input class="form-check-input" type="checkbox" id="n5">
+                <label class="form-check-label" for="n5">Mentions and replies</label>
+              </div>
+              <button class="btn btn-navy">Save preferences</button>
+            </div>
+          </div>
+
+          <!-- Security -->
+          <div class="tab-pane fade" id="tabSecurity" role="tabpanel">
+            <div class="demo-card">
+              <div class="demo-title">Change password</div>
+              <form class="row g-3" onsubmit="return false">
+                <div class="col-md-4">
+                  <label class="form-label" for="seCur">Current password</label>
+                  <input id="seCur" type="password" class="form-control" placeholder="••••••••" autocomplete="current-password">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="seNew">New password</label>
+                  <input id="seNew" type="password" class="form-control" placeholder="••••••••" autocomplete="new-password">
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label" for="seConf">Confirm password</label>
+                  <input id="seConf" type="password" class="form-control" placeholder="••••••••" autocomplete="new-password">
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-navy" type="submit"><i class="fa-solid fa-key me-2"></i>Update password</button>
+                </div>
+              </form>
+            </div>
+
+            <div class="demo-card">
+              <div class="demo-title">Two-factor authentication</div>
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="se2fa" checked>
+                <label class="form-check-label" for="se2fa">Require a verification code when signing in</label>
+              </div>
+            </div>
+
+            <div class="demo-card mb-0">
+              <div class="demo-title">Active sessions</div>
+              <div class="table-responsive">
+                <table class="table align-middle mb-0">
+                  <thead>
+                    <tr><th>Device</th><th>Location</th><th>Last active</th><th class="text-end">Action</th></tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>Chrome · macOS</td><td>Jakarta, ID</td><td>Now</td><td class="text-end"><span class="badge badge-soft-success badge-pill">Current</span></td></tr>
+                    <tr><td>Safari · iPhone</td><td>Jakarta, ID</td><td>2 hours ago</td><td class="text-end"><button class="btn btn-sm btn-outline-danger">Sign out</button></td></tr>
+                    <tr><td>Firefox · Windows</td><td>Bandung, ID</td><td>3 days ago</td><td class="text-end"><button class="btn btn-sm btn-outline-danger">Sign out</button></td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

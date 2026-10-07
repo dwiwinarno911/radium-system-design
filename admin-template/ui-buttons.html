@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Buttons</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="ui-buttons">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Buttons</h1>
+      <p class="page-sub">Button variations: colors, sizes, icons, groups, and states.</p>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Solid</div>
+      <p class="demo-note">Primary actions. <code>btn-navy</code> is the template brand color.</p>
+      <div class="demo-row">
+        <button class="btn btn-navy">Navy (brand)</button>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-dark">Dark</button>
+        <button class="btn btn-light border">Light</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Outline</div>
+      <p class="demo-note">Best for secondary actions.</p>
+      <div class="demo-row">
+        <button class="btn btn-outline-primary">Primary</button>
+        <button class="btn btn-outline-secondary">Secondary</button>
+        <button class="btn btn-outline-success">Success</button>
+        <button class="btn btn-outline-info">Info</button>
+        <button class="btn btn-outline-warning">Warning</button>
+        <button class="btn btn-outline-danger">Danger</button>
+        <button class="btn btn-outline-dark">Dark</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Sizes</div>
+      <div class="demo-row">
+        <button class="btn btn-primary btn-lg">Large</button>
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-sm">Small</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">With icons</div>
+      <div class="demo-row">
+        <button class="btn btn-navy"><i class="fa-solid fa-plus me-2"></i>Add</button>
+        <button class="btn btn-success"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
+        <button class="btn btn-outline-danger"><i class="fa-regular fa-trash-can me-2"></i>Delete</button>
+        <button class="btn btn-outline-dark"><i class="fa-solid fa-download me-2"></i>Download</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Icon-only buttons</div>
+      <p class="demo-note">Use the <code>btn-icon</code> class to keep them square.</p>
+      <div class="demo-row">
+        <button class="btn btn-primary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></button>
+        <button class="btn btn-outline-primary btn-icon" title="Share"><i class="fa-solid fa-share-nodes"></i></button>
+        <button class="btn btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></button>
+        <button class="btn btn-light border btn-icon" title="Settings"><i class="fa-solid fa-gear"></i></button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Button groups</div>
+      <div class="demo-row">
+        <div class="btn-group" role="group" aria-label="Example group">
+          <button class="btn btn-outline-primary">Left</button>
+          <button class="btn btn-outline-primary">Center</button>
+          <button class="btn btn-outline-primary">Right</button>
+        </div>
+        <div class="btn-group" role="group" aria-label="Example icon group">
+          <button class="btn btn-navy btn-icon"><i class="fa-solid fa-align-left"></i></button>
+          <button class="btn btn-navy btn-icon"><i class="fa-solid fa-align-center"></i></button>
+          <button class="btn btn-navy btn-icon"><i class="fa-solid fa-align-right"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Button states</div>
+      <div class="demo-row">
+        <button class="btn btn-primary" disabled>Disabled</button>
+        <button class="btn btn-primary" disabled>
+          <span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Saving...
+        </button>
+        <button class="btn btn-outline-secondary" disabled>Cancel</button>
+      </div>
+    </div>
+
+    <div class="demo-card mb-0">
+      <div class="demo-title">Full-width buttons</div>
+      <div class="d-grid gap-2 d-md-flex">
+        <button class="btn btn-navy btn-lg px-4"><i class="fa-solid fa-paper-plane me-2"></i>Send</button>
+        <button class="btn btn-outline-secondary btn-lg px-4">Later</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

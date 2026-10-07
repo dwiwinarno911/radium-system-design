@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Modals</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="ui-modals">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Modals & Offcanvas</h1>
+      <p class="page-sub">Dialog examples: basic, with a form, scrollable, confirmation, sizes, and side panels.</p>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Basic modal</div>
+      <p class="demo-note">A simple dialog with header, body, and footer.</p>
+      <div class="demo-row">
+        <button class="btn btn-navy" data-bs-toggle="modal" data-bs-target="#modalBasic">Open modal</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Modal with form</div>
+      <div class="demo-row">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalForm"><i class="fa-solid fa-user-plus me-2"></i>Add user</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Scrollable modal</div>
+      <p class="demo-note">Long content scrolls without moving the page.</p>
+      <div class="demo-row">
+        <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modalScroll">Terms & conditions</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Confirmation modal</div>
+      <div class="demo-row">
+        <button class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalConfirm"><i class="fa-regular fa-trash-can me-2"></i>Delete data</button>
+      </div>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Modal sizes</div>
+      <div class="demo-row">
+        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalSm">Small</button>
+        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalLg">Large</button>
+        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalXl">Extra large</button>
+        <button class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#modalFull">Fullscreen</button>
+      </div>
+    </div>
+
+    <div class="demo-card mb-0">
+      <div class="demo-title">Offcanvas</div>
+      <p class="demo-note">Panels that slide in from the edge of the screen.</p>
+      <div class="demo-row">
+        <button class="btn btn-navy" data-bs-toggle="offcanvas" data-bs-target="#ocStart">From left</button>
+        <button class="btn btn-navy" data-bs-toggle="offcanvas" data-bs-target="#ocEnd">From right</button>
+        <button class="btn btn-navy" data-bs-toggle="offcanvas" data-bs-target="#ocBottom">From bottom</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Basic modal -->
+<div class="modal fade" id="modalBasic" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="mb-0">This is a sample modal body. You can place text, images, or other components here.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-navy">Save</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Form modal -->
+<div class="modal fade" id="modalForm" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <form onsubmit="return false">
+        <div class="modal-header">
+          <h5 class="modal-title">Add user</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label" for="mName">Name</label>
+            <input id="mName" type="text" class="form-control" placeholder="Full name">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="mEmail">Email</label>
+            <input id="mEmail" type="email" class="form-control" placeholder="name@email.com">
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="mRole">Role</label>
+            <select id="mRole" class="form-select">
+              <option>Admin</option>
+              <option>Editor</option>
+              <option>Author</option>
+            </select>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="mActive" checked>
+            <label class="form-check-label" for="mActive">Activate account</label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-navy">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Scrollable modal -->
+<div class="modal fade" id="modalScroll" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <div class="modal-header">
+        <h5 class="modal-title">Terms & conditions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>By using this service, you agree to the terms and conditions below.</p>
+        <p>1. Accounts are personal and must not be shared.</p>
+        <p>2. Uploaded content must comply with applicable law.</p>
+        <p>3. We may update these terms at any time.</p>
+        <p>4. Personal data is processed in line with the privacy policy.</p>
+        <p>5. Violations may result in account suspension.</p>
+        <p>6. Users are responsible for the security of their password.</p>
+        <p>7. The service is provided "as is".</p>
+        <p>8. Disputes are resolved through mutual agreement.</p>
+        <p>9. These terms take effect when the account is created.</p>
+        <p>10. Questions can be sent to the support team.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        <button class="btn btn-navy" data-bs-dismiss="modal">I agree</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Confirmation modal -->
+<div class="modal fade" id="modalConfirm" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-sm">
+    <div class="modal-content text-center" style="border-radius:var(--radius)">
+      <div class="modal-body p-4">
+        <div class="mb-3 text-danger" style="font-size:2.4rem"><i class="fa-solid fa-triangle-exclamation"></i></div>
+        <h5 class="mb-2">Delete this item?</h5>
+        <p class="text-muted mb-4">This action cannot be undone.</p>
+        <div class="d-flex gap-2 justify-content-center">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button class="btn btn-danger" data-bs-dismiss="modal">Yes, delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Size: small -->
+<div class="modal fade" id="modalSm" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <div class="modal-header"><h5 class="modal-title">Small</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">Small size.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Size: large -->
+<div class="modal fade" id="modalLg" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <div class="modal-header"><h5 class="modal-title">Large</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">Large size.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Size: extra large -->
+<div class="modal fade" id="modalXl" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" style="border-radius:var(--radius)">
+      <div class="modal-header"><h5 class="modal-title">Extra large</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">Extra large size.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Size: fullscreen -->
+<div class="modal fade" id="modalFull" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">Fullscreen</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">The modal fills the entire screen.</div>
+      <div class="modal-footer"><button class="btn btn-navy" data-bs-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Offcanvas left -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="ocStart">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Left panel</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">Panel content from the left side.</div>
+</div>
+
+<!-- Offcanvas right -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="ocEnd">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Filter</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="mb-3">
+      <label class="form-label" for="ocCat">Category</label>
+      <select id="ocCat" class="form-select"><option>All</option><option>Technology</option><option>Design</option></select>
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="ocStatus">Status</label>
+      <select id="ocStatus" class="form-select"><option>All</option><option>Active</option><option>Draft</option></select>
+    </div>
+    <button class="btn btn-navy w-100">Apply</button>
+  </div>
+</div>
+
+<!-- Offcanvas bottom -->
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="ocBottom">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Bottom panel</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">Panel content from the bottom side.</div>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

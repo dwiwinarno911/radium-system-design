@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – Charts</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="charts">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Charts</h1>
+      <p class="page-sub">A sample dashboard built with Highcharts.</p>
+    </div>
+
+    <!-- Stat cards + sparkline -->
+    <div class="row g-3 mb-1">
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="text-muted">Total Views</div>
+              <div class="fs-3 fw-bold" style="color:var(--navy)">128.4K</div>
+            </div>
+            <span class="badge badge-soft-success badge-pill"><i class="fa-solid fa-arrow-trend-up me-1"></i>12%</span>
+          </div>
+          <div id="spark1" style="height:56px"></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="text-muted">Revenue</div>
+              <div class="fs-3 fw-bold" style="color:var(--navy)">Rp 48M</div>
+            </div>
+            <span class="badge badge-soft-success badge-pill"><i class="fa-solid fa-arrow-trend-up me-1"></i>8%</span>
+          </div>
+          <div id="spark2" style="height:56px"></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="text-muted">New Readers</div>
+              <div class="fs-3 fw-bold" style="color:var(--navy)">3,214</div>
+            </div>
+            <span class="badge badge-soft-danger badge-pill"><i class="fa-solid fa-arrow-trend-down me-1"></i>3%</span>
+          </div>
+          <div id="spark3" style="height:56px"></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="text-muted">Articles</div>
+              <div class="fs-3 fw-bold" style="color:var(--navy)">248</div>
+            </div>
+            <span class="badge badge-soft-info badge-pill"><i class="fa-solid fa-minus me-1"></i>0%</span>
+          </div>
+          <div id="spark4" style="height:56px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Line -->
+    <div class="demo-card">
+      <div class="demo-title">Visits vs Readers</div>
+      <div id="chartLine" style="height:320px"></div>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-xl-8">
+        <div class="demo-card">
+          <div class="demo-title">Monthly Revenue</div>
+          <div id="chartArea" style="height:300px"></div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="demo-card">
+          <div class="demo-title">Traffic Sources</div>
+          <div id="chartDonut" style="height:300px"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="demo-card mb-0">
+      <div class="demo-title">Articles by Category</div>
+      <div id="chartBar" style="height:300px"></div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/highcharts/highcharts.js"></script>
+<script src="assets/vendor/highcharts/accessibility.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/charts.js"></script>
+</body>
+</html>

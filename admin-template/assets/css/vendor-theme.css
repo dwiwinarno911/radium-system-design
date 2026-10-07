@@ -1,0 +1,113 @@
+/* ==========================================================================
+   vendor-theme.css
+   Aligns third-party library styling with the template theme
+   (navy #12294a, panel #e8edf0, accent #e0457b, 12px radius, Poppins font).
+   Load AFTER the vendor CSS & style.css, only on pages that use it.
+   ========================================================================== */
+
+/* ===== Select2 (with select2-bootstrap-5-theme) ===== */
+.select2-container--bootstrap-5 .select2-selection{
+  border-radius:var(--radius);border-color:#cfd8e3;min-height:46px;padding:.45rem .75rem}
+.select2-container--bootstrap-5.select2-container--focus .select2-selection,
+.select2-container--bootstrap-5.select2-container--open .select2-selection{
+  border-color:var(--navy-2);box-shadow:0 0 0 .2rem rgba(47,80,115,.18)}
+.select2-container--bootstrap-5 .select2-dropdown{
+  border-radius:var(--radius);border-color:#cfd8e3;box-shadow:0 10px 24px rgba(18,41,74,.15)}
+.select2-container--bootstrap-5 .select2-results__option--highlighted[aria-selected]{
+  background:var(--navy);color:#fff}
+.select2-container--bootstrap-5 .select2-results__option[aria-selected=true]{
+  background:var(--navy-2);color:#fff}
+.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__choice{
+  background:var(--navy);border-color:var(--navy);color:#fff;border-radius:8px}
+.select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__choice__remove{
+  color:#a5cef2}
+.select2-dropdown .select2-search .select2-search__field{border-radius:8px}
+
+/* ===== bootstrap-datepicker ===== */
+.datepicker{border-radius:var(--radius);border-color:#cfd8e3;padding:.5rem;color:var(--text)}
+.datepicker-dropdown{box-shadow:0 12px 26px rgba(18,41,74,.20)}
+.datepicker table tr th{color:var(--navy)}
+.datepicker table tr th.dow{color:var(--muted);font-weight:500}
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused{background:var(--panel);border-radius:8px}
+.datepicker table tr td.active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:focus,
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover{
+  background-image:none;background:var(--navy);border-color:var(--navy);border-radius:8px;text-shadow:none}
+.datepicker table tr td.today,
+.datepicker table tr td.today:hover{background-image:none;background:#fbdce8;border-radius:8px;color:var(--accent)}
+.datepicker table tr td.range{background:#e3edf7;border-radius:0;color:var(--navy)}
+
+/* ===== jquery-timepicker ===== */
+.ui-timepicker-wrapper{
+  border-radius:var(--radius);border-color:#cfd8e3;background:#fff;
+  box-shadow:0 12px 26px rgba(18,41,74,.20);font-family:'Poppins',system-ui,sans-serif}
+.ui-timepicker-list li{padding:.45rem .9rem;color:var(--text)}
+.ui-timepicker-list li:hover,
+.ui-timepicker-list .ui-timepicker-selected{background:var(--navy);color:#fff}
+.ui-timepicker-list li.ui-timepicker-disabled,
+.ui-timepicker-list li.ui-timepicker-disabled:hover{background:#fff;color:#a9b6c4}
+
+/* ===== bootstrap-daterangepicker ===== */
+.daterangepicker{
+  border-radius:var(--radius);border-color:#cfd8e3;background:#fff;
+  box-shadow:0 14px 30px rgba(18,41,74,.22);font-family:'Poppins',system-ui,sans-serif;color:var(--text)}
+.daterangepicker .calendar-table{border:0}
+.daterangepicker td.active,
+.daterangepicker td.active:hover{background:var(--navy)}
+.daterangepicker td.in-range{background:#e3edf7;color:var(--navy)}
+.daterangepicker td.start-date{border-radius:8px 0 0 8px}
+.daterangepicker td.end-date{border-radius:0 8px 8px 0}
+.daterangepicker .ranges li{color:var(--navy);border-radius:8px}
+.daterangepicker .ranges li.active,
+.daterangepicker .ranges li:hover{background:var(--navy);border-color:var(--navy);color:#fff}
+.daterangepicker .drp-buttons{border-top-color:#e3e9f0}
+.daterangepicker .drp-buttons .btn{
+  border-radius:var(--radius);font-weight:500}
+.daterangepicker .drp-buttons .btn-primary,
+.daterangepicker .drp-buttons .btn-primary:hover{
+  background:var(--navy);border-color:var(--navy)}
+.daterangepicker .drp-buttons .btn-primary:hover{background:#1b3a66;border-color:#1b3a66}
+.daterangepicker select.monthselect,
+.daterangepicker select.yearselect{border:1px solid #cfd8e3;border-radius:8px;padding:.15rem .35rem;color:var(--text)}
+
+/* ===== FullCalendar v6 ===== */
+.fc{
+  --fc-border-color:#d9e1ea;
+  --fc-today-bg-color:#eaf3ff;
+  --fc-page-bg-color:#fff;
+  --fc-neutral-bg-color:#f2f6fa;
+  --fc-button-bg-color:var(--navy);
+  --fc-button-border-color:var(--navy);
+  --fc-button-hover-bg-color:#1b3a66;
+  --fc-button-hover-border-color:#1b3a66;
+  --fc-button-active-bg-color:#0d1f39;
+  --fc-button-active-border-color:#0d1f39;
+  --fc-event-bg-color:var(--navy);
+  --fc-event-border-color:var(--navy);
+  --fc-event-text-color:#fff;
+  font-family:'Poppins',system-ui,sans-serif}
+.fc .fc-toolbar-title{font-size:1.4rem;font-weight:600;color:var(--navy)}
+.fc .fc-button{border-radius:var(--radius);font-weight:500;font-size:.9rem;text-transform:capitalize}
+.fc .fc-button:focus,
+.fc .fc-button-primary:focus{box-shadow:0 0 0 .2rem rgba(47,80,115,.25)}
+.fc .fc-col-header-cell{background:#f2f6fa}
+.fc .fc-col-header-cell-cushion{color:var(--navy);font-weight:500;padding:.5rem 0;text-decoration:none}
+.fc .fc-daygrid-day-number{color:var(--text);text-decoration:none;padding:.3rem .45rem}
+.fc .fc-daygrid-event{border-radius:6px;padding:.1rem .35rem;font-size:.82rem}
+.fc .fc-event-time{font-weight:600}
+.fc .fc-day-today{background:#eaf3ff !important}
+.fc .fc-list-event:hover td{background:#f2f6fa}
+
+/* ===== CKEditor 5 ===== */
+.ck.ck-editor__top .ck-sticky-panel .ck-toolbar{
+  border-radius:var(--radius) var(--radius) 0 0;background:#f5f8fc;border-color:#cfd8e3}
+.ck.ck-editor__main>.ck-editor__editable{
+  border-radius:0 0 var(--radius) var(--radius);
+  border-color:#cfd8e3;min-height:280px;
+  font-family:'Poppins',system-ui,sans-serif;color:var(--text)}
+.ck.ck-editor__main>.ck-editor__editable.ck-focused{
+  border-color:var(--navy-2) !important;box-shadow:0 0 0 .2rem rgba(47,80,115,.18) !important}
+.ck.ck-toolbar.ck-toolbar_grouping>.ck-toolbar__items{gap:.15rem}

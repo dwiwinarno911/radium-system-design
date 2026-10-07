@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Pickers</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/vendor/select2/select2.min.css" rel="stylesheet">
+<link href="assets/vendor/select2-bootstrap-5-theme/select2-bootstrap-5-theme.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
+<link href="assets/vendor/jquery-timepicker/jquery.timepicker.min.css" rel="stylesheet">
+<link href="assets/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/vendor-theme.css" rel="stylesheet">
+</head>
+<body data-page="ui-pickers">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Pickers</h1>
+      <p class="page-sub">Date picker, time picker, date range picker, and Select2 — all styled to match the theme.</p>
+    </div>
+
+    <!-- Datepicker -->
+    <div class="demo-card">
+      <div class="demo-title">Date picker</div>
+      <p class="demo-note">bootstrap-datepicker.</p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="dpInput">Pick a date</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-calendar"></i></span>
+            <input id="dpInput" type="text" class="form-control js-datepicker" placeholder="Pick a date" autocomplete="off">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Inline date picker</label>
+          <div class="js-datepicker-inline"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Timepicker -->
+    <div class="demo-card">
+      <div class="demo-title">Time picker</div>
+      <p class="demo-note">30-minute interval, 08:00–20:00.</p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="tpInput">Pick a time</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-clock"></i></span>
+            <input id="tpInput" type="text" class="form-control js-timepicker" placeholder="--:--" autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Date range -->
+    <div class="demo-card">
+      <div class="demo-title">Date range picker</div>
+      <p class="demo-note">With quick ranges (Today, Last 7 Days, Last 30 Days, This Month).</p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="drInput">Date range</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-calendar-days"></i></span>
+            <input id="drInput" type="text" class="form-control js-daterange" autocomplete="off">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Select2 -->
+    <div class="demo-card mb-0">
+      <div class="demo-title">Select2</div>
+      <p class="demo-note">Searchable selects: single, multiple, grouped, and free tags.</p>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="s2Single">Single select</label>
+          <select id="s2Single" class="form-select js-select2" data-placeholder="Search a category...">
+            <option></option>
+            <option>Technology</option>
+            <option>Design</option>
+            <option>Business</option>
+            <option>Health</option>
+            <option>Education</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="s2Multi">Multiple select</label>
+          <select id="s2Multi" class="form-select js-select2-multi" multiple data-placeholder="Select multiple...">
+            <option selected>Technology</option>
+            <option>Design</option>
+            <option selected>Business</option>
+            <option>Health</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="s2Group">Grouped (optgroup)</label>
+          <select id="s2Group" class="form-select js-select2" data-placeholder="Select...">
+            <option></option>
+            <optgroup label="Asia">
+              <option>Indonesia</option><option>Malaysia</option><option>Japan</option>
+            </optgroup>
+            <optgroup label="Europe">
+              <option>Germany</option><option>France</option><option>Netherlands</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="s2Tags">Free tags</label>
+          <select id="s2Tags" class="form-select js-select2-tags" multiple data-placeholder="Type and press Enter..."></select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="s2Disabled">Disabled</label>
+          <select id="s2Disabled" class="form-select js-select2" disabled>
+            <option selected>Technology</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/moment/moment.min.js"></script>
+<script src="assets/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="assets/vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="assets/vendor/jquery-timepicker/jquery.timepicker.min.js"></script>
+<script src="assets/vendor/select2/select2.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/pickers.js"></script>
+</body>
+</html>

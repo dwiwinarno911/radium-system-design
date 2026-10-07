@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – Post Plan</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="post-plan">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <h1 class="page-title">Post Plan</h1>
+        <p class="page-sub">Schedule and plan your article publishing.</p>
+      </div>
+      <button class="btn btn-navy"><i class="fa-solid fa-plus me-2"></i>New post</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="row g-3">
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-regular fa-calendar-check"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">6</div><div class="text-muted">Scheduled</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">4</div><div class="text-muted">In draft</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">12</div><div class="text-muted">Published this month</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">2</div><div class="text-muted">Awaiting review</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Schedule table -->
+    <div class="demo-card mb-0">
+      <div class="demo-title">Upcoming schedule</div>
+      <div class="table-responsive table-hscroll">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="navy">
+            <tr><th>Title</th><th>Author</th><th>Category</th><th>Publish date</th><th>Status</th><th class="text-end">Action</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="fw-semibold">Designing a scalable design system</td><td>Sarah Lee</td><td>Design</td><td>Jan 16, 2026</td>
+              <td><span class="badge badge-soft-info badge-pill">Scheduled</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">CSS container queries explained</td><td>John Carter</td><td>Technology</td><td>Jan 18, 2026</td>
+              <td><span class="badge badge-soft-info badge-pill">Scheduled</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">A practical guide to design tokens</td><td>Maya Ellis</td><td>Design</td><td>Jan 21, 2026</td>
+              <td><span class="badge badge-soft-navy badge-pill">Draft</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Web performance in 2026</td><td>David Brooks</td><td>Technology</td><td>Jan 24, 2026</td>
+              <td><span class="badge badge-soft-info badge-pill">Scheduled</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Product identity lessons from big rebrands</td><td>Laura Price</td><td>Business</td><td>Jan 27, 2026</td>
+              <td><span class="badge badge-soft-navy badge-pill">Draft</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Writing technical content for developers</td><td>John Carter</td><td>Education</td><td>Feb 01, 2026</td>
+              <td><span class="badge badge-soft-info badge-pill">Scheduled</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">An accessible forms checklist</td><td>Sarah Lee</td><td>Technology</td><td>Feb 04, 2026</td>
+              <td><span class="badge badge-soft-navy badge-pill">Draft</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Motion design principles for interfaces</td><td>Maya Ellis</td><td>Design</td><td>Feb 07, 2026</td>
+              <td><span class="badge badge-soft-info badge-pill">Scheduled</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">The state of front-end tooling in 2026</td><td>David Brooks</td><td>Technology</td><td>Feb 10, 2026</td>
+              <td><span class="badge badge-soft-warning badge-pill">Awaiting review</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr>
+              <td class="fw-semibold">Getting started with design tokens</td><td>Laura Price</td><td>Design</td><td>Jan 05, 2026</td>
+              <td><span class="badge badge-soft-success badge-pill">Published</span></td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Admin Template – style.css
+   Semua style global template. Urutkan setelah bootstrap.min.css.
+   ========================================================================== */
+
+:root{
+  --navy:#12294a; --navy-2:#2f5073; --panel:#e8edf0; --hero:#a5cef2;
+  --c-blue:#9fd0ff; --c-purple:#d2b4de; --c-pink:#ffadcb; --list:#d0d8e0;
+  --accent:#e0457b; --text:#12294a; --muted:#6b7a8c;
+  --sidebar-w:300px; --radius:12px; --pill:24px; --curve:24px;
+}
+*{font-family:'Poppins',system-ui,sans-serif}
+body{background:var(--navy);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+
+/* ===== Topbar ===== */
+.topbar{display:flex;align-items:center;gap:1.25rem;padding:1.25rem 2rem 1.25rem 0;color:#fff;flex:none}
+.brand{width:var(--sidebar-w);text-align:center;font-weight:700;font-size:2.4rem;letter-spacing:-1px;color:#fff;text-decoration:none}
+.search{flex:0 1 560px;position:relative}
+.search input{background:var(--navy-2);border:0;color:#fff;border-radius:var(--radius);padding:.8rem 1rem .8rem 3rem}
+.search input::placeholder{color:#9db3cc}
+.search input:focus{background:var(--navy-2);color:#fff;box-shadow:0 0 0 2px #a5cef2}
+.search i{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:#9db3cc;font-size:1.1rem}
+.icon-btn{position:relative;width:48px;height:48px;border:0;border-radius:var(--radius);background:var(--navy-2);color:#cfe3f7;font-size:1.2rem}
+.icon-btn:hover{background:#3b6088;color:#fff}
+.icon-btn .dot{position:absolute;top:10px;right:12px;width:9px;height:9px;border-radius:50%;background:#ff7fa8}
+.user{color:#fff;text-decoration:none;display:flex;align-items:center;gap:.75rem;font-size:1.25rem}
+.avatar{width:48px;height:48px;border-radius:var(--radius);background:#7fb5e6;display:grid;place-items:end center;overflow:hidden;color:#2f5073;font-size:2.2rem}
+
+/* ===== Layout ===== */
+.shell{flex:1;min-height:0;display:flex}
+.sidebar{width:var(--sidebar-w);flex:none;padding:2.5rem 0 2rem 1rem}
+.sidebar .nav-link{position:relative;display:flex;align-items:center;gap:1rem;color:#fff;font-size:1.15rem;padding:.9rem 1.4rem;margin-bottom:.7rem;border-radius:var(--pill) 0 0 var(--pill)}
+.sidebar .nav-link i{font-size:1.2rem;width:1.6rem;text-align:center}
+.sidebar .nav-link:hover{color:#a5cef2}
+.sidebar .nav-link.active{background:var(--panel);color:var(--navy)}
+/* connector curve (fillet) so the active menu blends with the panel.
+   A --curve x --curve square sits at the top/bottom of the menu's right end;
+   a transparent circle (showing the navy body) is cut out of the panel color. */
+.sidebar .nav-link.active::before,.sidebar .nav-link.active::after{
+  content:"";position:absolute;right:0;width:var(--curve);height:var(--curve);pointer-events:none}
+.sidebar .nav-link.active::before{
+  top:calc(var(--curve) * -1);
+  background:radial-gradient(circle at 0 0,transparent calc(var(--curve) - 1px),var(--panel) var(--curve))}
+.sidebar .nav-link.active::after{
+  bottom:calc(var(--curve) * -1);
+  background:radial-gradient(circle at 0 100%,transparent calc(var(--curve) - 1px),var(--panel) var(--curve))}
+
+.main{flex:1;min-width:0;min-height:0;overflow-y:auto;background:var(--panel);border-radius:var(--radius);padding:2rem 2rem 2.5rem;margin:0 1rem 1rem 0}
+.main{scrollbar-width:thin;scrollbar-color:#c3cfdb transparent}
+.main::-webkit-scrollbar{width:10px}
+.main::-webkit-scrollbar-track{background:transparent}
+.main::-webkit-scrollbar-thumb{background:#c3cfdb;border-radius:8px;border:2px solid var(--panel)}
+.card-soft{border:0;border-radius:var(--radius);box-shadow:0 8px 14px rgba(18,41,74,.15)}
+
+/* Page title */
+.page-head{margin-bottom:1.75rem}
+.page-head .page-title{font-size:2.1rem;font-weight:600;letter-spacing:-1px;margin:0}
+.page-head .page-sub{color:var(--muted);margin:.25rem 0 0}
+
+/* ===== Hero ===== */
+.hero{background:var(--hero);padding:2rem;position:relative;overflow:hidden;min-height:250px}
+.hero h1{font-size:2.3rem;font-weight:600;margin-bottom:1rem}
+.hero p{max-width:520px;font-size:1.15rem;line-height:1.5}
+.btn-navy{background:var(--navy);color:#a5cef2;border-radius:var(--radius);padding:.9rem 2.2rem;font-size:1.15rem;border:0}
+.btn-navy:hover{background:#1b3a66;color:#fff}
+.hero .art{position:absolute;right:2rem;bottom:0;font-size:9rem;color:#f4d8c8;line-height:1;opacity:.9}
+
+/* ===== Stat cards ===== */
+.stat{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;border-radius:var(--radius);box-shadow:0 6px 10px rgba(18,41,74,.15)}
+.stat .ico{flex:none;width:68px;height:68px;border-radius:var(--radius);background:var(--navy);display:grid;place-items:center;color:var(--accent);font-size:2rem}
+.stat .num{font-size:1.7rem;font-weight:700;line-height:1.1;white-space:nowrap}
+.stat>div:last-child{min-width:0}
+.stat .lbl{font-size:1.05rem;font-weight:500}
+.stat.blue{background:var(--c-blue)} .stat.blue .lbl{color:#1d4f8f}
+.stat.purple{background:var(--c-purple)} .stat.purple .lbl{color:#4a4a7a}
+.stat.pink{background:var(--c-pink)} .stat.pink .lbl{color:#7a3b5a}
+
+/* ===== Top articles ===== */
+.top-articles{background:var(--list);padding:1.8rem 1.6rem}
+.section-title{font-size:2.1rem;font-weight:600;letter-spacing:-1px}
+.month-pick{color:var(--muted);font-size:1.1rem}
+.month-pick .dropdown-toggle{background:none;border:0;color:inherit}
+.article-row{display:flex;align-items:center;gap:1.1rem;padding:1rem 0}
+.article-row .rank{width:28px;color:var(--muted);align-self:flex-start;margin-top:.4rem}
+.article-row .thumb{flex:none;width:128px;height:128px;border-radius:var(--radius);background:#fff;display:grid;place-items:center;overflow:hidden;font-weight:700;font-size:1.3rem}
+.article-row .title{font-size:1.25rem;font-weight:500;line-height:1.3}
+.article-row .date{color:var(--muted);font-size:1.05rem}
+.metrics{display:flex;gap:1.3rem;align-items:center;font-weight:600;white-space:nowrap;margin-left:auto}
+.metrics i{margin-right:.4rem}
+.metrics .earn{font-size:.9rem}
+
+/* ===== Calendar ===== */
+.today{border:2px solid #7fb5e6;border-radius:var(--radius);background:#fff;overflow:hidden;box-shadow:0 4px 8px rgba(18,41,74,.12)}
+.today-head{background:#bfe0ff;padding:.9rem 1rem;display:flex;justify-content:space-between;align-items:center;font-weight:500;border-bottom:2px solid #7fb5e6}
+.week{display:grid;grid-template-columns:repeat(6,1fr);text-align:center;padding:.6rem .4rem;border-bottom:2px solid #7fb5e6}
+.week button{border:0;background:none;padding:.2rem 0;font-weight:600;color:var(--navy)}
+.week .d{display:grid;place-items:center;width:32px;height:32px;margin:.2rem auto 0;border-radius:var(--radius)}
+.week button.active .d{background:var(--navy);color:#fff}
+.agenda{padding:.5rem 1rem 1rem}
+.agenda-item{display:flex;gap:1rem;padding:.9rem 0;border-bottom:1.5px solid #7fb5e6;font-size:.9rem}
+.agenda-item:last-child{border-bottom:0}
+.agenda-item .t{font-weight:500}
+.agenda-item .by{font-size:.78rem;color:var(--muted)} .agenda-item .by b{color:#000}
+.empty{padding:1.5rem 0;text-align:center;color:var(--muted)}
+
+/* ===== Submenu sidebar ===== */
+.sidebar .nav-parent{justify-content:flex-start;cursor:pointer;user-select:none}
+.sidebar .nav-parent .chev{margin-left:auto;font-size:.8rem;transition:transform .2s}
+.sidebar .nav-parent.open .chev{transform:rotate(90deg)}
+/* The active parent intentionally uses the standard .nav-link.active style
+   (panel-colored pill + connector curve), so it is not overridden. */
+.sidebar .submenu{display:none;margin:-.35rem 0 .9rem}
+.sidebar .submenu.show{display:block}
+.sidebar .submenu .nav-link{
+  padding:.55rem 1.4rem .55rem 3.3rem;margin-bottom:.5rem;
+  font-size:1rem;color:#c6d8ee}
+.sidebar .submenu .nav-link:hover{color:#fff}
+/* Active submenu item: just bolder text, no pill/fillet. */
+.sidebar .submenu .nav-link.active{background:none;color:#fff;font-weight:600}
+.sidebar .submenu .nav-link.active::before,
+.sidebar .submenu .nav-link.active::after{display:none}
+
+/* ===== Component utilities ===== */
+.demo-card{background:#fff;border-radius:var(--radius);box-shadow:0 8px 14px rgba(18,41,74,.10);padding:1.5rem;margin-bottom:1.5rem}
+.demo-title{font-size:1.15rem;font-weight:600;color:var(--navy);margin-bottom:.35rem}
+.demo-note{color:var(--muted);font-size:.92rem;margin-bottom:1rem}
+.demo-row{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+
+.stat-icon{width:52px;height:52px;border-radius:var(--radius);background:#eaf1f8;color:var(--navy);display:grid;place-items:center;font-size:1.3rem;flex:none}
+
+/* ===== Align Bootstrap colors with the theme ===== */
+:root{
+  --bs-primary:#12294a; --bs-primary-rgb:18,41,74;
+  --bs-link-color:#12294a; --bs-link-color-rgb:18,41,74;
+  --bs-link-hover-color:#1b3a66; --bs-link-hover-color-rgb:27,58,102;
+  --bs-focus-ring-color:rgba(47,80,115,.25);
+}
+.btn-primary{
+  --bs-btn-bg:#12294a; --bs-btn-border-color:#12294a;
+  --bs-btn-hover-bg:#1b3a66; --bs-btn-hover-border-color:#1b3a66;
+  --bs-btn-active-bg:#0d1f39; --bs-btn-active-border-color:#0d1f39;
+  --bs-btn-disabled-bg:#12294a; --bs-btn-disabled-border-color:#12294a;
+}
+.btn-outline-primary{
+  --bs-btn-color:#12294a; --bs-btn-border-color:#12294a;
+  --bs-btn-hover-bg:#12294a; --bs-btn-hover-border-color:#12294a;
+  --bs-btn-active-bg:#0d1f39; --bs-btn-active-border-color:#0d1f39;
+}
+.form-control:focus,.form-select:focus{
+  border-color:var(--navy-2);box-shadow:0 0 0 .2rem rgba(47,80,115,.18)}
+.form-check-input:checked{background-color:var(--navy);border-color:var(--navy)}
+.form-check-input:focus{border-color:var(--navy-2);box-shadow:0 0 0 .2rem rgba(47,80,115,.18)}
+.form-range::-webkit-slider-thumb{background:var(--navy)}
+.form-range::-moz-range-thumb{background:var(--navy)}
+.pagination{
+  --bs-pagination-active-bg:#12294a; --bs-pagination-active-border-color:#12294a;
+  --bs-pagination-color:#12294a; --bs-pagination-hover-color:#1b3a66; --bs-pagination-focus-color:#1b3a66}
+.page-link{border-radius:8px}
+.nav-pills .nav-link.active{background:var(--navy)}
+.btn{border-radius:var(--radius)}
+.btn-lg{border-radius:var(--radius)}
+.btn-icon{width:46px;height:46px;padding:0;display:inline-grid;place-items:center}
+.btn-icon.btn-sm{width:36px;height:36px}
+.btn-icon.btn-lg{width:56px;height:56px}
+
+/* ===== Alert & badge variants (soft) ===== */
+.alert-soft{border:0;border-left:4px solid currentColor;border-radius:var(--radius)}
+.alert-soft-success{background:#e2f6ea;color:#137a45}
+.alert-soft-info{background:#e3f0fb;color:#1d6aa8}
+.alert-soft-warning{background:#fdf3dd;color:#9a6b09}
+.alert-soft-danger{background:#fde4ec;color:#b0245a}
+.alert-soft-navy{background:#e2eaf4;color:#12294a}
+.badge-soft-success{background:#dcf5e7;color:#137a45}
+.badge-soft-info{background:#e3f0fb;color:#1d6aa8}
+.badge-soft-warning{background:#fdf3dd;color:#9a6b09}
+.badge-soft-danger{background:#fde4ec;color:#b0245a}
+.badge-soft-navy{background:#e0e9f5;color:#12294a}
+.badge-pill{border-radius:50rem;padding:.35em .7em}
+
+/* ===== Form helpers ===== */
+.form-label{font-weight:500;color:var(--navy)}
+.form-text{color:var(--muted)}
+
+/* ===== Table: scroll + sticky header/column ===== */
+.table-scroll{
+  overflow:auto;max-height:340px;background:#fff;
+  border:1px solid #d9e1ea;border-radius:var(--radius)}
+.table-scroll table{margin:0}
+.table-scroll thead th{
+  position:sticky;top:0;z-index:2;white-space:nowrap;
+  background:var(--navy);color:#fff;border-color:#24405f}
+.table-scroll thead th.sticky-col{left:0;z-index:4}
+.table-scroll tbody td.sticky-col{
+  position:sticky;left:0;z-index:1;background:#fff}
+.table-scroll tbody tr:hover td.sticky-col{background:#f2f6fa}
+.table-hscroll{overflow-x:auto;border:1px solid #d9e1ea;border-radius:var(--radius);background:#fff}
+.table thead.navy th{background:var(--navy);color:#fff;border-color:#24405f;white-space:nowrap}
+
+/* ===== Inbox (mail) ===== */
+.mail{display:flex;background:#fff;border:1px solid #d9e1ea;border-radius:var(--radius);overflow:hidden;min-height:540px}
+.mail-side{width:340px;flex:none;border-right:1px solid #e6edf4;display:flex;flex-direction:column}
+.mail-side-head{padding:.85rem 1rem;border-bottom:1px solid #e6edf4;display:flex;gap:.5rem;align-items:center}
+.mail-list{flex:1;overflow-y:auto;max-height:600px}
+.mail-item{display:block;width:100%;text-align:left;border:0;background:none;padding:.9rem 1rem;border-bottom:1px solid #eef3f8;color:var(--text)}
+.mail-item:hover{background:#f5f9fc}
+.mail-item.active{background:#eaf3ff;box-shadow:inset 3px 0 0 var(--navy)}
+.mail-item .from{font-weight:500;color:var(--navy)}
+.mail-item .time{color:var(--muted);font-size:.76rem}
+.mail-item .subject{font-size:.92rem}
+.mail-item .preview{color:var(--muted);font-size:.82rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mail-item.unread .from,.mail-item.unread .subject{font-weight:600}
+.mail-main{flex:1;min-width:0;padding:1.5rem;overflow-y:auto;max-height:660px}
+.mail-avatar{width:42px;height:42px;border-radius:50%;background:var(--navy);color:#a5cef2;display:grid;place-items:center;font-weight:600;flex:none}
+@media (max-width:991px){
+  .mail{flex-direction:column}
+  .mail-side{width:auto;border-right:0;border-bottom:1px solid #e6edf4}
+  .mail-list{max-height:280px}
+}
+
+/* ===== Settings nav ===== */
+.settings-nav .nav-link{color:var(--navy);border-radius:var(--radius);text-align:left;display:flex;align-items:center;gap:.6rem}
+.settings-nav .nav-link.active{background:var(--navy);color:#fff}
+.setting-avatar{width:88px;height:88px;border-radius:50%;background:var(--navy);color:#a5cef2;display:grid;place-items:center;font-size:2.2rem}
+
+/* ===== Sidebar scroll ===== */
+/* The sidebar scrolls on its own; its scrollbar is hidden so it does not cover
+   the connector (fillet) between the active menu and the panel. The right panel
+   (.main) also scrolls on its own, so the page (body) never moves. */
+.sidebar{overflow-y:auto;scrollbar-width:none;-ms-overflow-style:none}
+.sidebar::-webkit-scrollbar{display:none;width:0;height:0}
+
+/* ===== Responsive ===== */
+.menu-toggle{display:none}
+@media (max-width:1199px){
+  .brand{width:auto;padding-left:1rem;font-size:1.8rem}
+  .menu-toggle{display:inline-grid;margin-left:1rem}
+  .sidebar{position:fixed;z-index:1040;top:0;bottom:0;left:0;background:var(--navy);transform:translateX(-100%);transition:transform .25s}
+  .sidebar.open{transform:none}
+  .sidebar{padding-top:5rem;padding-right:1.5rem;overflow-y:auto}
+  .sidebar .nav-link,.sidebar .nav-link.active{border-radius:var(--radius)}
+  .sidebar .nav-link.active::before,.sidebar .nav-link.active::after{display:none}
+  .main{margin:0 .75rem .75rem}
+  .topbar{padding-right:1rem;flex-wrap:wrap}
+  .user span.name{display:none}
+}
+@media (max-width:767px){
+  .article-row{flex-wrap:wrap}.metrics{margin-left:0;width:100%;padding-left:28px}
+  .article-row .thumb{width:84px;height:84px}
+  .topbar .icon-btn,.search{display:none}
+}
+@media (prefers-reduced-motion:reduce){.sidebar{transition:none}}

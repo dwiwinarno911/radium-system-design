@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Forms</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="ui-forms">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Forms</h1>
+      <p class="page-sub">A collection of input examples: text, choices, files, validation, and layout.</p>
+    </div>
+
+    <!-- Basic inputs -->
+    <div class="demo-card">
+      <div class="demo-title">Basic inputs</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="fText">Text</label>
+          <input id="fText" type="text" class="form-control" placeholder="Full name">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fEmail">Email</label>
+          <input id="fEmail" type="email" class="form-control" placeholder="name@email.com">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fPass">Password</label>
+          <input id="fPass" type="password" class="form-control" placeholder="••••••••">
+          <div class="form-text">At least 8 characters.</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fNumber">Number</label>
+          <input id="fNumber" type="number" class="form-control" min="0" max="100" value="10">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fTel">Phone</label>
+          <input id="fTel" type="tel" class="form-control" placeholder="+1 555 000 1234">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fUrl">URL</label>
+          <input id="fUrl" type="url" class="form-control" placeholder="https://example.com">
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="fArea">Textarea</label>
+          <textarea id="fArea" class="form-control" rows="3" placeholder="Write a short description..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selects -->
+    <div class="demo-card">
+      <div class="demo-title">Choice (select)</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="fSelect">Single select</label>
+          <select id="fSelect" class="form-select">
+            <option selected disabled>Select a category</option>
+            <option>Technology</option>
+            <option>Design</option>
+            <option>Business</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fMulti">Multiple select</label>
+          <select id="fMulti" class="form-select" multiple size="3">
+            <option selected>Technology</option>
+            <option>Design</option>
+            <option selected>Business</option>
+            <option>Health</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input groups -->
+    <div class="demo-card">
+      <div class="demo-title">Input groups</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="fUser">Username</label>
+          <div class="input-group">
+            <span class="input-group-text">@</span>
+            <input id="fUser" type="text" class="form-control" placeholder="johndoe">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fPrice">Price</label>
+          <div class="input-group">
+            <span class="input-group-text">$</span>
+            <input id="fPrice" type="text" class="form-control" placeholder="0">
+            <span class="input-group-text">.00</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fSearch">Search</label>
+          <div class="input-group">
+            <input id="fSearch" type="text" class="form-control" placeholder="Search...">
+            <button class="btn btn-navy" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fDate">Date</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-calendar"></i></span>
+            <input id="fDate" type="date" class="form-control">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating labels -->
+    <div class="demo-card">
+      <div class="demo-title">Floating labels</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="form-floating">
+            <input id="fFloat1" type="text" class="form-control" placeholder="Name">
+            <label for="fFloat1">Full name</label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-floating">
+            <select id="fFloat2" class="form-select">
+              <option selected>Technology</option>
+              <option>Design</option>
+              <option>Business</option>
+            </select>
+            <label for="fFloat2">Category</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Check, radio, switch -->
+    <div class="demo-card">
+      <div class="demo-title">Checkbox, radio & switch</div>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="c1" checked>
+            <label class="form-check-label" for="c1">Checked checkbox</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="c2">
+            <label class="form-check-label" for="c2">Default checkbox</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="c3" disabled>
+            <label class="form-check-label" for="c3">Disabled</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="r" id="r1" checked>
+            <label class="form-check-label" for="r1">Radio A</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="r" id="r2">
+            <label class="form-check-label" for="r2">Radio B</label>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="sw1" checked>
+            <label class="form-check-label" for="sw1">Switch on</label>
+          </div>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="sw2">
+            <label class="form-check-label" for="sw2">Switch off</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Range & file -->
+    <div class="demo-card">
+      <div class="demo-title">Range & file</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="fRange">Range</label>
+          <input id="fRange" type="range" class="form-range" min="0" max="100" value="60">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="fFile">File upload</label>
+          <input id="fFile" type="file" class="form-control">
+        </div>
+      </div>
+    </div>
+
+    <!-- Validation -->
+    <div class="demo-card">
+      <div class="demo-title">Validation</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="vOk">Valid input</label>
+          <input id="vOk" type="text" class="form-control is-valid" value="Valid value">
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="vErr">Invalid input</label>
+          <input id="vErr" type="text" class="form-control is-invalid" value="Invalid value">
+          <div class="invalid-feedback">This field is required.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Disabled & read-only -->
+    <div class="demo-card">
+      <div class="demo-title">Disabled & read-only</div>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label" for="d1">Disabled</label>
+          <input id="d1" type="text" class="form-control" value="Cannot be changed" disabled>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="d2">Read-only</label>
+          <input id="d2" type="text" class="form-control" value="Read-only value" readonly>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form with actions -->
+    <div class="demo-card mb-0">
+      <div class="demo-title">Form with actions</div>
+      <form class="row g-3" onsubmit="return false">
+        <div class="col-md-6">
+          <label class="form-label" for="p1">Article title</label>
+          <input id="p1" type="text" class="form-control" placeholder="Title...">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label" for="p2">Publish date</label>
+          <input id="p2" type="date" class="form-control">
+        </div>
+        <div class="col-12">
+          <label class="form-label" for="p3">Summary</label>
+          <textarea id="p3" class="form-control" rows="2"></textarea>
+        </div>
+        <div class="col-12 d-flex gap-2">
+          <button class="btn btn-navy" type="submit"><i class="fa-solid fa-floppy-disk me-2"></i>Save</button>
+          <button class="btn btn-outline-secondary" type="reset">Reset</button>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

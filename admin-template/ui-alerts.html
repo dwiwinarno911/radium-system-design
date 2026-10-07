@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Alerts & Labels</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="ui-alerts">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Alerts & Labels</h1>
+      <p class="page-sub">Examples of alerts/warnings, badges, and labels for various statuses.</p>
+    </div>
+
+    <!-- Basic alerts -->
+    <div class="demo-card">
+      <div class="demo-title">Basic alerts</div>
+      <p class="demo-note">Four status variants with icons.</p>
+      <div class="alert alert-success d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-circle-check me-2"></i>
+        <div>Your data was saved successfully.</div>
+      </div>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-circle-info me-2"></i>
+        <div>A system update is available.</div>
+      </div>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+        <div>Your storage quota is almost full.</div>
+      </div>
+      <div class="alert alert-danger d-flex align-items-center mb-0" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-2"></i>
+        <div>Failed to connect to the server. Please try again later.</div>
+      </div>
+    </div>
+
+    <!-- Alerts with heading -->
+    <div class="demo-card">
+      <div class="demo-title">Alerts with heading</div>
+      <p class="demo-note">Useful for messages that need extra explanation.</p>
+      <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading h6 fw-semibold mb-1"><i class="fa-solid fa-triangle-exclamation me-2"></i>Attention</h4>
+        <p class="mb-0">Make sure all required fields are filled in before saving your data.</p>
+      </div>
+      <div class="alert alert-danger mb-0" role="alert">
+        <h4 class="alert-heading h6 fw-semibold mb-1"><i class="fa-solid fa-circle-xmark me-2"></i>Something went wrong</h4>
+        <p class="mb-2">Your request could not be processed.</p>
+        <hr>
+        <p class="mb-0 small">Error code: <code>ERR-503</code></p>
+      </div>
+    </div>
+
+    <!-- Soft alerts -->
+    <div class="demo-card">
+      <div class="demo-title">Soft alerts (template style)</div>
+      <p class="demo-note">A gentle variant with an accent bar on the left.</p>
+      <div class="alert alert-soft alert-soft-success d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-circle-check me-2"></i><div>Profile updated successfully.</div>
+      </div>
+      <div class="alert alert-soft alert-soft-info d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-circle-info me-2"></i><div>Draft saved automatically.</div>
+      </div>
+      <div class="alert alert-soft alert-soft-warning d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-triangle-exclamation me-2"></i><div>Your email has not been verified yet.</div>
+      </div>
+      <div class="alert alert-soft alert-soft-danger d-flex align-items-center" role="alert">
+        <i class="fa-solid fa-circle-exclamation me-2"></i><div>Password is too weak.</div>
+      </div>
+      <div class="alert alert-soft alert-soft-navy d-flex align-items-center mb-0" role="alert">
+        <i class="fa-solid fa-lightbulb me-2"></i><div>Tip: always keep a backup of your content.</div>
+      </div>
+    </div>
+
+    <!-- Dismissible alerts -->
+    <div class="demo-card">
+      <div class="demo-title">Dismissible alerts</div>
+      <p class="demo-note">Click the close button to dismiss.</p>
+      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <i class="fa-solid fa-bell me-2"></i>You have 3 new notifications.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="alert alert-soft alert-soft-success alert-dismissible fade show mb-0" role="alert">
+        <i class="fa-solid fa-circle-check me-2"></i>Your changes were applied successfully.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+
+    <!-- Badges -->
+    <div class="demo-card">
+      <div class="demo-title">Badge / Label</div>
+      <p class="demo-note">Solid, soft, pill, and with icons.</p>
+      <div class="demo-row mb-3">
+        <span class="badge text-bg-primary">Primary</span>
+        <span class="badge text-bg-secondary">Secondary</span>
+        <span class="badge text-bg-success">Success</span>
+        <span class="badge text-bg-info">Info</span>
+        <span class="badge text-bg-warning">Warning</span>
+        <span class="badge text-bg-danger">Danger</span>
+        <span class="badge text-bg-dark">Dark</span>
+      </div>
+      <div class="demo-row mb-3">
+        <span class="badge badge-soft-navy">Navy</span>
+        <span class="badge badge-soft-success">Success</span>
+        <span class="badge badge-soft-info">Info</span>
+        <span class="badge badge-soft-warning">Warning</span>
+        <span class="badge badge-soft-danger">Danger</span>
+      </div>
+      <div class="demo-row">
+        <span class="badge text-bg-primary badge-pill">99+</span>
+        <span class="badge badge-soft-danger badge-pill">12</span>
+        <span class="badge text-bg-success"><i class="fa-solid fa-star me-1"></i>New</span>
+        <span class="badge badge-soft-info"><i class="fa-solid fa-clock me-1"></i>3 days ago</span>
+      </div>
+    </div>
+
+    <!-- Status labels -->
+    <div class="demo-card">
+      <div class="demo-title">Status labels (chips)</div>
+      <p class="demo-note">Commonly used in tables to mark the status of a row.</p>
+      <div class="demo-row">
+        <span class="badge badge-soft-success badge-pill"><i class="fa-solid fa-circle me-1" style="font-size:.45rem;vertical-align:middle"></i>Active</span>
+        <span class="badge badge-soft-warning badge-pill"><i class="fa-solid fa-circle me-1" style="font-size:.45rem;vertical-align:middle"></i>Pending</span>
+        <span class="badge badge-soft-navy badge-pill"><i class="fa-solid fa-circle me-1" style="font-size:.45rem;vertical-align:middle"></i>Draft</span>
+        <span class="badge badge-soft-danger badge-pill"><i class="fa-solid fa-circle me-1" style="font-size:.45rem;vertical-align:middle"></i>Rejected</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

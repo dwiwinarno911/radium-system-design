@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Tables</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="ui-tables">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Tables</h1>
+      <p class="page-sub">Table examples: basic, horizontal scroll, vertical scroll with a sticky header, and combinations.</p>
+    </div>
+
+    <!-- Basic table -->
+    <div class="demo-card">
+      <div class="demo-title">Basic table</div>
+      <p class="demo-note">Brand-colored header, no scroll.</p>
+      <div class="table-responsive table-hscroll">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="navy">
+            <tr><th>#</th><th>Name</th><th>Email</th><th>Role</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>John Carter</td><td>john@mail.com</td><td>Admin</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>2</td><td>Sarah Lee</td><td>sarah@mail.com</td><td>Editor</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td></tr>
+            <tr><td>3</td><td>Andy Wilson</td><td>andy@mail.com</td><td>Author</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td></tr>
+            <tr><td>4</td><td>Rina Moore</td><td>rina@mail.com</td><td>Author</td><td><span class="badge badge-soft-danger badge-pill">Rejected</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Horizontal scroll -->
+    <div class="demo-card">
+      <div class="demo-title">Horizontal scroll</div>
+      <p class="demo-note">Many columns &rarr; scroll sideways. Wrap with <code>.table-responsive .table-hscroll</code>.</p>
+      <div class="table-responsive table-hscroll">
+        <table class="table table-hover align-middle mb-0 text-nowrap">
+          <thead class="navy">
+            <tr>
+              <th>ID</th><th>Product</th><th>Category</th><th>Price</th><th>Stock</th>
+              <th>Sold</th><th>Rating</th><th>Warehouse</th><th>Status</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>PRD-001</td><td>Mechanical Keyboard</td><td>Accessories</td><td>$85.00</td><td>42</td><td>318</td><td>4.8</td><td>New York</td><td><span class="badge badge-soft-success badge-pill">Available</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td></tr>
+            <tr><td>PRD-002</td><td>Wireless Mouse</td><td>Accessories</td><td>$32.00</td><td>8</td><td>512</td><td>4.6</td><td>Chicago</td><td><span class="badge badge-soft-warning badge-pill">Low stock</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td></tr>
+            <tr><td>PRD-003</td><td>27" Monitor</td><td>Displays</td><td>$340.00</td><td>15</td><td>129</td><td>4.9</td><td>Austin</td><td><span class="badge badge-soft-success badge-pill">Available</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td></tr>
+            <tr><td>PRD-004</td><td>Gaming Headset</td><td>Audio</td><td>$115.00</td><td>0</td><td>204</td><td>4.4</td><td>New York</td><td><span class="badge badge-soft-danger badge-pill">Out of stock</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td></tr>
+            <tr><td>PRD-005</td><td>HD Webcam</td><td>Cameras</td><td>$64.00</td><td>23</td><td>97</td><td>4.2</td><td>Boston</td><td><span class="badge badge-soft-success badge-pill">Available</span></td><td><a href="#" class="btn btn-sm btn-outline-primary">Edit</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Vertical scroll + sticky header -->
+    <div class="demo-card">
+      <div class="demo-title">Vertical scroll + sticky header</div>
+      <p class="demo-note">Wrap with <code>.table-scroll</code>; <code>thead th</code> becomes sticky automatically.</p>
+      <div class="table-scroll">
+        <table class="table table-hover align-middle mb-0">
+          <thead>
+            <tr><th>#</th><th>Name</th><th>Email</th><th>Role</th><th>Joined</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td>John Carter</td><td>john@mail.com</td><td>Admin</td><td>Jan 12, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>2</td><td>Sarah Lee</td><td>sarah@mail.com</td><td>Editor</td><td>Feb 03, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>3</td><td>Andy Wilson</td><td>andy@mail.com</td><td>Author</td><td>Feb 21, 2025</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td></tr>
+            <tr><td>4</td><td>Rina Moore</td><td>rina@mail.com</td><td>Author</td><td>Mar 02, 2025</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td></tr>
+            <tr><td>5</td><td>David Brooks</td><td>david@mail.com</td><td>Editor</td><td>Mar 17, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>6</td><td>Maya Ellis</td><td>maya@mail.com</td><td>Author</td><td>Mar 29, 2025</td><td><span class="badge badge-soft-danger badge-pill">Rejected</span></td></tr>
+            <tr><td>7</td><td>Frank Nolan</td><td>frank@mail.com</td><td>Admin</td><td>Apr 05, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>8</td><td>Laura Price</td><td>laura@mail.com</td><td>Editor</td><td>Apr 19, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>9</td><td>Henry Grant</td><td>henry@mail.com</td><td>Author</td><td>Apr 27, 2025</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td></tr>
+            <tr><td>10</td><td>Nadia Blake</td><td>nadia@mail.com</td><td>Author</td><td>May 08, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>11</td><td>Oscar Reed</td><td>oscar@mail.com</td><td>Editor</td><td>May 22, 2025</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td></tr>
+            <tr><td>12</td><td>Wendy Foster</td><td>wendy@mail.com</td><td>Author</td><td>Jun 01, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>13</td><td>Ryan Cooper</td><td>ryan@mail.com</td><td>Admin</td><td>Jun 14, 2025</td><td><span class="badge badge-soft-success badge-pill">Active</span></td></tr>
+            <tr><td>14</td><td>Anna Simmons</td><td>anna@mail.com</td><td>Editor</td><td>Jun 30, 2025</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Combined: horizontal + vertical + sticky header + sticky column -->
+    <div class="demo-card">
+      <div class="demo-title">Horizontal + vertical scroll + sticky first column</div>
+      <p class="demo-note">Add the <code>sticky-col</code> class to the first column so it stays put while scrolling.</p>
+      <div class="table-scroll">
+        <table class="table table-hover align-middle mb-0 text-nowrap">
+          <thead>
+            <tr>
+              <th class="sticky-col">ID</th><th>Name</th><th>Email</th><th>Phone</th><th>City</th>
+              <th>State</th><th>Zip</th><th>Country</th><th>Role</th><th>Status</th>
+              <th>Last Login</th><th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="sticky-col">USR-001</td><td>John Carter</td><td>john@mail.com</td><td>+1 212 555 0101</td><td>New York</td><td>NY</td><td>10110</td><td>USA</td><td>Admin</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>2 hours ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-002</td><td>Sarah Lee</td><td>sarah@mail.com</td><td>+1 312 555 0132</td><td>Chicago</td><td>IL</td><td>60601</td><td>USA</td><td>Editor</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>5 hours ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-003</td><td>Andy Wilson</td><td>andy@mail.com</td><td>+1 512 555 0175</td><td>Austin</td><td>TX</td><td>73301</td><td>USA</td><td>Author</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td><td>1 day ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-004</td><td>Rina Moore</td><td>rina@mail.com</td><td>+1 617 555 0119</td><td>Boston</td><td>MA</td><td>02108</td><td>USA</td><td>Author</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td><td>2 days ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-005</td><td>David Brooks</td><td>david@mail.com</td><td>+1 415 555 0143</td><td>San Francisco</td><td>CA</td><td>94103</td><td>USA</td><td>Editor</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>3 days ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-006</td><td>Maya Ellis</td><td>maya@mail.com</td><td>+1 305 555 0166</td><td>Miami</td><td>FL</td><td>33101</td><td>USA</td><td>Author</td><td><span class="badge badge-soft-danger badge-pill">Rejected</span></td><td>4 days ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-007</td><td>Frank Nolan</td><td>frank@mail.com</td><td>+1 206 555 0188</td><td>Seattle</td><td>WA</td><td>98101</td><td>USA</td><td>Admin</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>5 days ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-008</td><td>Laura Price</td><td>laura@mail.com</td><td>+1 503 555 0127</td><td>Portland</td><td>OR</td><td>97201</td><td>USA</td><td>Editor</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>6 days ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-009</td><td>Henry Grant</td><td>henry@mail.com</td><td>+1 720 555 0154</td><td>Denver</td><td>CO</td><td>80202</td><td>USA</td><td>Author</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td><td>1 week ago</td><td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td></tr>
+            <tr><td class="sticky-col">USR-010</td><td>Nadia Blake</td><td>nadia@mail.com</td><td>+1 619 555 0192</td><td>San Diego</td><td>CA</td><td>92101</td><td>USA</td><td>Author</td><td><span class="badge badge-soft-success badge-pill">Active</span></td><td>1 week ago</td><td><a href="#" class="btn btn-sm btn-link">View</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pagination -->
+    <div class="demo-card mb-0">
+      <div class="demo-title">Pagination</div>
+      <p class="demo-note">Page navigation example (static).</p>
+      <nav aria-label="Page navigation">
+        <ul class="pagination mb-0">
+          <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">...</a></li>
+          <li class="page-item"><a class="page-link" href="#">12</a></li>
+          <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – My Articles</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="articles">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <h1 class="page-title">My Articles</h1>
+        <p class="page-sub">Manage all articles you have written.</p>
+      </div>
+      <button class="btn btn-navy"><i class="fa-solid fa-plus me-2"></i>New article</button>
+    </div>
+
+    <!-- Summary -->
+    <div class="row g-3">
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-regular fa-file-lines"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">24</div><div class="text-muted">Total articles</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">16</div><div class="text-muted">Published</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-regular fa-pen-to-square"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">5</div><div class="text-muted">Drafts</div></div>
+        </div>
+      </div>
+      <div class="col-sm-6 col-xl-3">
+        <div class="demo-card mb-3 d-flex align-items-center gap-3">
+          <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+          <div><div class="fs-4 fw-bold" style="color:var(--navy)">3</div><div class="text-muted">Pending review</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filter + table -->
+    <div class="demo-card mb-0">
+      <div class="row g-2 align-items-center mb-3">
+        <div class="col-md-5">
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input id="artSearch" type="search" class="form-control" placeholder="Search articles...">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <select id="artCategory" class="form-select">
+            <option value="">All categories</option>
+            <option value="design">Design</option>
+            <option value="technology">Technology</option>
+            <option value="business">Business</option>
+            <option value="education">Education</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="artStatus" class="form-select">
+            <option value="">All statuses</option>
+            <option value="published">Published</option>
+            <option value="draft">Draft</option>
+            <option value="pending">Pending</option>
+          </select>
+        </div>
+        <div class="col-md-1 text-md-end">
+          <button id="artReset" class="btn btn-outline-secondary btn-icon" title="Reset filters"><i class="fa-solid fa-rotate-left"></i></button>
+        </div>
+      </div>
+
+      <div class="table-responsive table-hscroll">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="navy">
+            <tr>
+              <th style="width:36px"><input class="form-check-input" type="checkbox" aria-label="Select all"></th>
+              <th>Title</th><th>Category</th><th>Status</th><th>Views</th><th>Date</th><th class="text-end">Action</th>
+            </tr>
+          </thead>
+          <tbody id="artBody">
+            <tr data-title="Designing a scalable design system" data-category="design" data-status="published">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Designing a scalable design system</td>
+              <td>Design</td><td><span class="badge badge-soft-success badge-pill">Published</span></td>
+              <td>12.4K</td><td>Jan 13, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="Understanding CSS container queries" data-category="technology" data-status="published">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Understanding CSS container queries</td>
+              <td>Technology</td><td><span class="badge badge-soft-success badge-pill">Published</span></td>
+              <td>9.8K</td><td>Jan 12, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="A practical guide to design tokens" data-category="design" data-status="draft">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">A practical guide to design tokens</td>
+              <td>Design</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td>
+              <td>4.2K</td><td>Jan 10, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="Building accessible forms" data-category="technology" data-status="pending">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Building accessible forms</td>
+              <td>Technology</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td>
+              <td>7.1K</td><td>Jan 09, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="Product identity lessons from big rebrands" data-category="business" data-status="published">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Product identity lessons from big rebrands</td>
+              <td>Business</td><td><span class="badge badge-soft-success badge-pill">Published</span></td>
+              <td>15.3K</td><td>Jan 07, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="Motion design principles for interfaces" data-category="design" data-status="published">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Motion design principles for interfaces</td>
+              <td>Design</td><td><span class="badge badge-soft-success badge-pill">Published</span></td>
+              <td>6.5K</td><td>Jan 05, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="Writing technical content for developers" data-category="education" data-status="draft">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">Writing technical content for developers</td>
+              <td>Education</td><td><span class="badge badge-soft-navy badge-pill">Draft</span></td>
+              <td>2.9K</td><td>Jan 03, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+            <tr data-title="The state of front-end tooling in 2026" data-category="technology" data-status="pending">
+              <td><input class="form-check-input" type="checkbox"></td>
+              <td class="fw-semibold">The state of front-end tooling in 2026</td>
+              <td>Technology</td><td><span class="badge badge-soft-warning badge-pill">Pending</span></td>
+              <td>11.2K</td><td>Jan 01, 2026</td>
+              <td class="text-end text-nowrap">
+                <a href="#" class="btn btn-sm btn-outline-primary btn-icon" title="View"><i class="fa-regular fa-eye"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-secondary btn-icon" title="Edit"><i class="fa-solid fa-pen"></i></a>
+                <a href="#" class="btn btn-sm btn-outline-danger btn-icon" title="Delete"><i class="fa-regular fa-trash-can"></i></a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mt-3">
+        <div class="text-muted small" id="artCount">Showing 8 of 24 articles</div>
+        <nav aria-label="Articles pagination">
+          <ul class="pagination pagination-sm mb-0">
+            <li class="page-item disabled"><a class="page-link" href="#"><i class="fa-solid fa-chevron-left"></i></a></li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#"><i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/articles.js"></script>
+</body>
+</html>

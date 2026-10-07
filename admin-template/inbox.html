@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – Inbox</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body data-page="inbox">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div>
+        <h1 class="page-title">Inbox</h1>
+        <p class="page-sub">Messages and article requests from readers.</p>
+      </div>
+      <button class="btn btn-navy"><i class="fa-solid fa-pen me-2"></i>Compose</button>
+    </div>
+
+    <div class="demo-card mb-0 p-0" style="overflow:hidden">
+      <div class="mail">
+        <div class="mail-side">
+          <div class="mail-side-head">
+            <div class="input-group input-group-sm">
+              <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
+              <input id="mailSearch" type="search" class="form-control" placeholder="Search mail...">
+            </div>
+          </div>
+          <div class="mail-list" id="mailList"></div>
+        </div>
+        <div class="mail-main" id="mailMain"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/inbox.js"></script>
+</body>
+</html>

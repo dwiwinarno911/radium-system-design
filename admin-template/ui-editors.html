@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – UI: Editors</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/vendor/ckeditor5/ckeditor5.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/vendor-theme.css" rel="stylesheet">
+</head>
+<body data-page="ui-editors">
+
+<div id="topbar-root"></div>
+
+<div class="shell">
+  <aside class="sidebar" id="sidebar"></aside>
+
+  <main class="main">
+    <div class="page-head">
+      <h1 class="page-title">Editors</h1>
+      <p class="page-sub">WYSIWYG text editor powered by CKEditor 5.</p>
+    </div>
+
+    <div class="demo-card">
+      <div class="demo-title">Full editor</div>
+      <p class="demo-note">Full toolbar: headings, text formatting, lists, tables, links, images, and more.</p>
+      <textarea id="editor1" rows="10">
+        <h2>Article title</h2>
+        <p>Write your content here. This editor supports <strong>bold</strong>, <em>italic</em>, lists, tables, links, and images.</p>
+        <ul><li>First point</li><li>Second point</li><li>Third point</li></ul>
+      </textarea>
+    </div>
+
+    <div class="demo-card mb-0">
+      <div class="demo-title">Simple editor</div>
+      <p class="demo-note">A compact toolbar for comment boxes or short notes.</p>
+      <textarea id="editor2" rows="6">
+        <p>Write a comment...</p>
+      </textarea>
+    </div>
+  </main>
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/ckeditor5/ckeditor5.umd.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/pages/editors.js"></script>
+</body>
+</html>
