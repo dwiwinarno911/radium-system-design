@@ -1,0 +1,73 @@
+/* ==========================================================================
+   auth.css – styles for the standalone authentication page (login.html).
+   Load AFTER bootstrap.min.css and style.css.
+   ========================================================================== */
+
+body.auth{background:var(--navy);height:100vh;height:100dvh;overflow:hidden}
+
+.auth-shell{display:grid;grid-template-columns:1.05fr .95fr;height:100%}
+
+/* ===== Left: brand / marketing panel ===== */
+.auth-aside{position:relative;overflow:hidden;padding:3rem 3.5rem;color:#fff;
+  display:flex;flex-direction:column;justify-content:center;
+  background:radial-gradient(1100px 620px at 8% 0%,#1d3f6b 0%,var(--navy) 58%)}
+.auth-aside .brand-lg{font-weight:700;font-size:2rem;letter-spacing:-1px;color:#fff;text-decoration:none;position:relative}
+.auth-aside h2{font-size:2.5rem;font-weight:600;letter-spacing:-1px;line-height:1.15;margin:2rem 0 1rem;max-width:16ch;position:relative}
+.auth-aside p{color:#bcd2e8;font-size:1.05rem;line-height:1.6;max-width:46ch;position:relative;margin:0}
+.auth-feats{list-style:none;padding:0;margin:2.5rem 0 0;display:grid;gap:1rem;position:relative}
+.auth-feats li{display:flex;gap:.9rem;align-items:flex-start;color:#dbe8f5}
+.auth-feats i{color:var(--hero);margin-top:.2rem;width:1.2rem;text-align:center}
+.auth-glow{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none}
+.auth-glow.a{width:340px;height:340px;background:#a5cef2;right:-90px;bottom:-70px;opacity:.45}
+.auth-glow.b{width:240px;height:240px;background:var(--accent);right:110px;top:-70px;opacity:.25}
+
+/* ===== Right: form panel ===== */
+.auth-main{background:var(--panel);display:grid;place-items:center;padding:2rem;overflow-y:auto}
+.auth-card{width:100%;max-width:420px}
+.auth-title{font-size:2rem;font-weight:600;letter-spacing:-1px;color:var(--navy);margin:0 0 .35rem}
+.auth-sub{color:var(--muted);margin:0 0 1.75rem}
+.auth-form .form-label{font-weight:500;color:var(--navy)}
+.auth-form .form-control{border-radius:var(--radius);padding:.8rem 1rem}
+.auth-form .input-group-text{background:#fff;border-radius:var(--radius) 0 0 var(--radius);color:var(--muted)}
+.auth-form .input-group .form-control{border-radius:0 var(--radius) var(--radius) 0}
+
+.auth-pass{position:relative}
+.auth-pass .form-control{padding-right:3rem}
+.auth-pass .toggle-pass{position:absolute;right:.35rem;top:50%;transform:translateY(-50%);
+  border:0;background:none;color:var(--muted);width:2.4rem;height:2.4rem;border-radius:8px}
+.auth-pass .toggle-pass:hover{color:var(--navy);background:#dfe6ee}
+
+.auth-row{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  margin:.35rem 0 1.25rem;flex-wrap:wrap}
+.auth-row a{color:var(--accent);text-decoration:none;font-weight:500}
+.auth-row a:hover{text-decoration:underline}
+
+.btn-auth{background:var(--navy);color:#fff;border:0;border-radius:var(--radius);
+  padding:.85rem 1rem;font-weight:500;width:100%}
+.btn-auth:hover{background:#1b3a66;color:#fff}
+
+.auth-divider{display:flex;align-items:center;gap:1rem;color:var(--muted);font-size:.9rem;margin:1.5rem 0}
+.auth-divider::before,.auth-divider::after{content:"";height:1px;background:#cdd7e2;flex:1}
+
+.auth-social{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+.btn-social{border:1px solid #cdd7e2;background:#fff;border-radius:var(--radius);padding:.7rem;
+  font-weight:500;color:var(--navy);display:flex;align-items:center;justify-content:center;gap:.55rem}
+.btn-social:hover{background:#f2f6fa;border-color:#b9c6d6}
+
+.auth-foot{text-align:center;color:var(--muted);margin-top:1.75rem}
+.auth-foot a{color:var(--navy);font-weight:600;text-decoration:none}
+.auth-foot a:hover{text-decoration:underline}
+
+/* ===== Responsive ===== */
+@media (max-width:991px){
+  .auth-shell{grid-template-columns:1fr;grid-template-rows:auto 1fr}
+  .auth-aside{padding:1.75rem 1.5rem;justify-content:flex-start}
+  .auth-aside h2{font-size:1.6rem;margin:1rem 0 .5rem;max-width:none}
+  .auth-aside p{font-size:.95rem;max-width:none}
+  .auth-feats,.auth-glow{display:none}
+  .auth-main{padding:1.75rem 1.25rem 2.5rem}
+}
+@media (max-width:575px){
+  .auth-title{font-size:1.6rem}
+  .auth-social{grid-template-columns:1fr}
+}

@@ -29,7 +29,11 @@
     ]},
     { page: "charts",   href: "charts.html",   icon: "fa-solid fa-chart-line",   label: "Charts" },
     { page: "calendar", href: "calendar.html", icon: "fa-regular fa-calendar",   label: "Calendar" },
-    { page: "settings", href: "settings.html", icon: "fa-solid fa-gear",         label: "Settings" }
+    { page: "settings", href: "settings.html", icon: "fa-solid fa-gear",         label: "Settings" },
+    { label: "Pages", icon: "fa-regular fa-window-maximize", children: [
+      { page: "login",          href: "login.html",          label: "Login" },
+      { page: "email-template", href: "email-template.html", label: "Email Template" }
+    ]}
   ];
 
   function leafHtml(item, active) {
@@ -62,7 +66,7 @@
   function topbarHtml() {
     return [
       '<header class="topbar">',
-        '<button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>',
+        '<button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>',
         '<a href="index.html" class="brand">LOGO</a>',
         '<div class="search">',
           '<i class="fa-solid fa-magnifying-glass"></i>',
@@ -80,7 +84,7 @@
               '<li><a class="dropdown-item" href="settings.html">Profile</a></li>',
               '<li><a class="dropdown-item" href="settings.html">Settings</a></li>',
               '<li><hr class="dropdown-divider"></li>',
-              '<li><a class="dropdown-item" href="#">Log out</a></li>',
+              '<li><a class="dropdown-item" href="login.html">Log out</a></li>',
             '</ul>',
           '</div>',
         '</div>',

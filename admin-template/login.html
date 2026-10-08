@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Template – Sign in</title>
+<link href="assets/css/poppins.css" rel="stylesheet">
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/auth.css" rel="stylesheet">
+</head>
+<body class="auth">
+
+<div class="auth-shell">
+  <!-- Brand panel -->
+  <section class="auth-aside">
+    <span class="auth-glow a"></span>
+    <span class="auth-glow b"></span>
+
+    <a href="index.html" class="brand-lg">LOGO</a>
+    <h2>Welcome back to your publishing workspace.</h2>
+    <p>Write, schedule, and analyze your articles from one place. Sign in to pick up right where you left off.</p>
+
+    <ul class="auth-feats">
+      <li><i class="fa-solid fa-circle-check"></i><span>Track performance with real-time analytics.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>Plan your content calendar ahead of time.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span>Collaborate with editors and guest authors.</span></li>
+    </ul>
+  </section>
+
+  <!-- Form panel -->
+  <section class="auth-main">
+    <div class="auth-card">
+      <h1 class="auth-title">Sign in</h1>
+      <p class="auth-sub">Enter your details to access your dashboard.</p>
+
+      <form class="auth-form" onsubmit="return false" novalidate>
+        <div class="mb-3">
+          <label class="form-label" for="loginEmail">Email address</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="fa-regular fa-envelope"></i></span>
+            <input id="loginEmail" type="email" class="form-control" placeholder="john.snow@example.com" autocomplete="email" autofocus>
+          </div>
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label" for="loginPassword">Password</label>
+          <div class="auth-pass">
+            <input id="loginPassword" type="password" class="form-control" placeholder="••••••••" autocomplete="current-password">
+            <button type="button" class="toggle-pass" id="togglePass" aria-label="Show password" aria-pressed="false">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="auth-row">
+          <div class="form-check mb-0">
+            <input class="form-check-input" type="checkbox" id="remember" checked>
+            <label class="form-check-label" for="remember">Remember me</label>
+          </div>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn btn-auth">
+          <i class="fa-solid fa-right-to-bracket me-2"></i>Sign in
+        </button>
+
+        <div class="auth-divider">or continue with</div>
+
+        <div class="auth-social">
+          <button type="button" class="btn-social"><i class="fa-brands fa-google" style="color:#ea4335"></i>Google</button>
+          <button type="button" class="btn-social"><i class="fa-brands fa-github"></i>GitHub</button>
+        </div>
+      </form>
+
+      <p class="auth-foot">Don't have an account? <a href="#">Create one</a></p>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    var btn = document.getElementById("togglePass");
+    var input = document.getElementById("loginPassword");
+    if (!btn || !input) return;
+    btn.addEventListener("click", function () {
+      var show = input.type === "password";
+      input.type = show ? "text" : "password";
+      btn.setAttribute("aria-pressed", show ? "true" : "false");
+      btn.setAttribute("aria-label", show ? "Hide password" : "Show password");
+      btn.innerHTML = '<i class="fa-regular ' + (show ? "fa-eye-slash" : "fa-eye") + '"></i>';
+    });
+  })();
+</script>
+</body>
+</html>

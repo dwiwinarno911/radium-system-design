@@ -10,7 +10,8 @@
   --sidebar-w:300px; --radius:12px; --pill:24px; --curve:24px;
 }
 *{font-family:'Poppins',system-ui,sans-serif}
-body{background:var(--navy);color:var(--text);height:100vh;display:flex;flex-direction:column;overflow:hidden}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{background:var(--navy);color:var(--text);height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
 
 /* ===== Topbar ===== */
 .topbar{display:flex;align-items:center;gap:1.25rem;padding:1.25rem 2rem 1.25rem 0;color:#fff;flex:none}
@@ -230,22 +231,96 @@ body{background:var(--navy);color:var(--text);height:100vh;display:flex;flex-dir
 .sidebar::-webkit-scrollbar{display:none;width:0;height:0}
 
 /* ===== Responsive ===== */
-.menu-toggle{display:none}
+.menu-toggle{display:none;padding-top: 0.9rem}
+
+/* Backdrop shown behind the off-canvas sidebar on small screens */
+.sidebar-backdrop{position:fixed;inset:0;z-index:1035;background:rgba(9,20,36,.55);
+  opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease}
+.sidebar-backdrop.show{opacity:1;visibility:visible}
+
+/* --- Tablet / small laptop: sidebar becomes an off-canvas drawer --- */
 @media (max-width:1199px){
   .brand{width:auto;padding-left:1rem;font-size:1.8rem}
   .menu-toggle{display:inline-grid;margin-left:1rem}
-  .sidebar{position:fixed;z-index:1040;top:0;bottom:0;left:0;background:var(--navy);transform:translateX(-100%);transition:transform .25s}
+  .sidebar{position:fixed;z-index:1040;top:0;bottom:0;left:0;width:min(var(--sidebar-w),82vw);
+    background:var(--navy);transform:translateX(-100%);transition:transform .25s ease;
+    padding-top:5.5rem;padding-right:1.5rem;overflow-y:auto;
+    box-shadow:0 0 40px rgba(0,0,0,.35)}
   .sidebar.open{transform:none}
-  .sidebar{padding-top:5rem;padding-right:1.5rem;overflow-y:auto}
   .sidebar .nav-link,.sidebar .nav-link.active{border-radius:var(--radius)}
   .sidebar .nav-link.active::before,.sidebar .nav-link.active::after{display:none}
-  .main{margin:0 .75rem .75rem}
-  .topbar{padding-right:1rem;flex-wrap:wrap}
+  .main{margin:0 .75rem .75rem;padding:1.5rem 1.5rem 2rem}
+  .topbar{padding-right:1rem;flex-wrap:wrap;gap:1rem}
   .user span.name{display:none}
 }
-@media (max-width:767px){
-  .article-row{flex-wrap:wrap}.metrics{margin-left:0;width:100%;padding-left:28px}
-  .article-row .thumb{width:84px;height:84px}
-  .topbar .icon-btn,.search{display:none}
+
+/* --- Small tablet: charts/calendar toolbars get cramped --- */
+@media (max-width:991px){
+  .fc .fc-toolbar{flex-direction:column;gap:.6rem}
+  .fc .fc-toolbar-chunk{display:flex;flex-wrap:wrap;justify-content:center;gap:.4rem}
+  .fc .fc-toolbar-title{font-size:1.2rem}
+  .fc .fc-button{padding:.3rem .55rem;font-size:.82rem}
 }
-@media (prefers-reduced-motion:reduce){.sidebar{transition:none}}
+
+/* --- Phone --- */
+@media (max-width:767px){
+  .topbar{padding:1rem .75rem 1rem 0;gap:.75rem}
+  .brand{padding-left:.75rem;font-size:1.5rem}
+  .menu-toggle{margin-left:.75rem}
+  /* Keep the hamburger; only the decorative topbar buttons/search are dropped */
+  .topbar .icon-btn:not(.menu-toggle),.topbar .search{display:none}
+  .main{margin:0 .5rem .5rem;padding:1.25rem 1rem 1.75rem}
+
+  .page-head{margin-bottom:1.25rem}
+  .page-head .page-title{font-size:1.6rem}
+  .page-head .page-sub{font-size:.95rem}
+  .page-head>.btn,.page-head>.form-select,.page-head .btn-navy{width:100%}
+
+  .demo-card{padding:1.15rem;margin-bottom:1.15rem}
+  .demo-title{font-size:1.05rem}
+  .section-title{font-size:1.6rem}
+
+  .hero{padding:1.5rem;min-height:auto}
+  .hero h1{font-size:1.8rem}
+  .hero p{font-size:1rem}
+
+  .stat .num{font-size:1.4rem;white-space:normal}
+
+  .article-row{flex-wrap:wrap;gap:.75rem}
+  .article-row .title{font-size:1.05rem}
+  .article-row .date{font-size:.9rem}
+  .article-row .thumb{width:72px;height:72px;font-size:1.05rem}
+  .metrics{margin-left:0;width:100%;padding-left:28px;font-size:.95rem;gap:1rem}
+
+  .today-head{font-size:.95rem}
+  .week{font-size:.85rem}
+  .agenda-item{font-size:.85rem}
+
+  .fc .fc-col-header-cell-cushion{padding:.35rem 0;font-size:.78rem}
+  .fc .fc-daygrid-day-number{font-size:.8rem}
+  .fc .fc-daygrid-event{font-size:.72rem}
+
+  /* Pickers: keep popovers inside the viewport */
+  .daterangepicker{max-width:calc(100vw - 20px)}
+  .daterangepicker .drp-calendar{max-width:100%}
+  .daterangepicker .drp-calendar.left,.daterangepicker .drp-calendar.right{padding:8px}
+  .datepicker,.datepicker-inline,.datepicker table{max-width:100%}
+  .ui-timepicker-wrapper{max-width:calc(100vw - 20px)}
+  .select2-container{max-width:100%}
+  .select2-dropdown{max-width:calc(100vw - 24px)}
+
+  /* CKEditor toolbar should wrap instead of overflowing */
+  .ck.ck-toolbar>.ck-toolbar__items{flex-wrap:wrap}
+  .mail-main{padding:1rem}
+}
+
+/* --- Narrow phone: single-month range picker + tighter chrome --- */
+@media (max-width:575px){
+  .daterangepicker .drp-calendar.right{display:none}
+  .demo-card{padding:1rem}
+  .page-head .page-title{font-size:1.45rem}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .sidebar,.sidebar-backdrop{transition:none}
+}
